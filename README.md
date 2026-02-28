@@ -1,4 +1,4 @@
-Live at: www.alluniversity.org
+Live at:https://alluniversity.org
 
 Yeh ek automated platform hai jo alag-alag universities (Gurugram University, MDU Rohtak, DU) ki official websites se latest notices aur updates ko scrape karke ek centralized dashboard par dikhata hai. Ise real-world production environment mein AWS par host kiya gaya hai.
 
