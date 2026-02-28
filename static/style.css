@@ -1,0 +1,104 @@
+/* General Setup */
+body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #eef2f6; margin: 0; color: #333; }
+header { background-color: #ffffff; padding-top: 25px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; position: relative; z-index: 10; }
+h1 { margin: 0 0 20px 0; color: #1a1a1a; font-size: 28px; font-weight: 800; text-shadow: 1px 1px 2px rgba(0,0,0,0.1); }
+
+/* Ticker Styling */
+.ticker-wrap { width: 100%; overflow: hidden; background-color: #0b1a30; color: white; padding: 12px 0; box-sizing: border-box; box-shadow: inset 0 -3px 10px rgba(0,0,0,0.5); }
+.ticker { display: inline-flex; white-space: nowrap; animation: ticker 25s linear infinite; }
+.ticker:hover { animation-play-state: paused; }
+.ticker-item { padding: 0 50px; font-size: 14px; letter-spacing: 0.5px; }
+.ticker-item a { color: #ffeb3b; text-decoration: none; font-weight: bold; transition: color 0.3s; }
+.ticker-item a:hover { color: #ffffff; text-decoration: underline; text-shadow: 0 0 8px rgba(255, 235, 59, 0.5); }
+
+@keyframes ticker {
+    0% { transform: translate3d(0, 0, 0); }
+    100% { transform: translate3d(-50%, 0, 0); }
+}
+
+/* Search Box */
+.search-container { max-width: 900px; margin: 40px auto 30px auto; padding: 0 20px; }
+#searchBox { 
+    width: 100%; padding: 18px 25px; font-size: 16px; 
+    border: 2px solid #e1e5ee; border-radius: 50px; 
+    box-shadow: 0 8px 15px rgba(0,0,0,0.05), inset 0 2px 4px rgba(0,0,0,0.02); 
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1); 
+}
+#searchBox:focus { outline: none; border-color: #0056b3; box-shadow: 0 12px 20px rgba(0, 86, 179, 0.15), inset 0 2px 4px rgba(0,0,0,0.02); transform: translateY(-2px); }
+
+/* Dashboard Grid */
+.dashboard { display: grid; gap: 30px; max-width: 1400px; margin: 0 auto 60px auto; padding: 0 20px; }
+@media(min-width: 900px) { .dashboard { grid-template-columns: repeat(3, 1fr); } }
+
+/* 🔥 3D UNI BOX STYLING 🔥 */
+.uni-box { 
+    background: #ffffff; 
+    border-radius: 16px; 
+    /* Deep 3D Shadow with Inset for bottom edge depth */
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08), 
+                0 4px 6px rgba(0,0,0,0.04),
+                inset 0 -4px 0 rgba(0,0,0,0.05); 
+    overflow: hidden; 
+    display: flex; 
+    flex-direction: column; 
+    border: 1px solid #ffffff; 
+    /* Smooth transition for Hover effect */
+    transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.4s ease; 
+}
+
+/* 🚀 Hover Animation (Lifts up the box) */
+.uni-box:hover {
+    transform: translateY(-12px); /* Box upar uthega */
+    box-shadow: 0 25px 40px rgba(0,0,0,0.12), 
+                0 10px 15px rgba(0,0,0,0.08),
+                inset 0 -4px 0 rgba(0,0,0,0.02); 
+}
+
+/* Header styling with 3D text */
+.uni-header { 
+    margin: 0; padding: 20px; color: white; font-size: 19px; 
+    text-align: center; font-weight: 700; letter-spacing: 0.5px; 
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15); 
+    text-shadow: 1px 2px 3px rgba(0,0,0,0.2); 
+    position: relative; z-index: 2;
+}
+
+/* Header Colors */
+.header-gug { background: linear-gradient(135deg, #1e7e34 0%, #28a745 100%); } 
+.header-mdu { background: linear-gradient(135deg, #a71d2a 0%, #dc3545 100%); } 
+.header-du { background: linear-gradient(135deg, #004494 0%, #007bff 100%); }  
+
+/* Notice List Scrollbar */
+.notice-list { padding: 10px 0; height: 500px; overflow-y: auto; background-color: #fafbfc; }
+.notice-list::-webkit-scrollbar { width: 8px; }
+.notice-list::-webkit-scrollbar-track { background: #f1f1f1; border-radius: 10px; }
+.notice-list::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 10px; border: 2px solid #f1f1f1; }
+.notice-list::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
+
+/* 🔥 Interactive 3D Notice Items 🔥 */
+.notice-item { 
+    padding: 16px 20px; 
+    border-bottom: 1px solid #edf2f7; 
+    background-color: #ffffff;
+    border-left: 4px solid transparent; 
+    transition: all 0.3s ease; 
+}
+
+.notice-item:last-child { border-bottom: none; }
+
+/* Slide Right Effect on Notice Hover */
+.notice-item:hover { 
+    background-color: #ffffff; 
+    transform: translateX(8px) scale(1.01); /* Thoda right khiskega aur bada hoga */
+    border-left: 4px solid #ffbc00; /* Yellow accent line */
+    box-shadow: -4px 4px 10px rgba(0,0,0,0.05); /* Shadow left side aayegi */
+    border-radius: 4px;
+    z-index: 5;
+    position: relative;
+}
+
+.notice-title { font-size: 15px; font-weight: 600; color: #1e3a8a; text-decoration: none; display: block; margin-bottom: 8px; line-height: 1.5; transition: color 0.2s; }
+.notice-title:hover { color: #2563eb; }
+.notice-date { font-size: 12px; color: #64748b; font-weight: 500; display: inline-block; background: #f1f5f9; padding: 4px 10px; border-radius: 20px; }
+
+.loading-text, .no-result { text-align: center; color: #64748b; font-weight: 500; padding: 40px 20px; }

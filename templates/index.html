@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Updates Dashboard</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 University Updates Dashboard</h1>
+
+        <div class="ticker-wrap">
+            <div class="ticker">
+                <span class="ticker-item">🌐 <strong>Gurugram University:</strong> <a
+                        href="https://gurugramuniversity.ac.in/" target="_blank">gurugramuniversity.ac.in</a></span>
+                <span class="ticker-item">🌐 <strong>MDU Rohtak:</strong> <a href="https://mdu.ac.in/"
+                        target="_blank">mdu.ac.in</a></span>
+                <span class="ticker-item">🌐 <strong>Delhi University:</strong> <a href="https://www.du.ac.in/"
+                        target="_blank">du.ac.in</a></span>
+                <span class="ticker-item">🌐 <strong>Gurugram University:</strong> <a
+                        href="https://gurugramuniversity.ac.in/" target="_blank">gurugramuniversity.ac.in</a></span>
+                <span class="ticker-item">🌐 <strong>MDU Rohtak:</strong> <a href="https://mdu.ac.in/"
+                        target="_blank">mdu.ac.in</a></span>
+                <span class="ticker-item">🌐 <strong>Delhi University:</strong> <a href="https://www.du.ac.in/"
+                        target="_blank">du.ac.in</a></span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="search-container">
+            <input type="text" id="searchBox" placeholder="🔍 Search any notice, exam, or result...">
+        </div>
+
+        <div class="dashboard">
+            <div class="uni-box">
+                <h2 class="uni-header header-gug">Gurugram University</h2>
+                <div class="notice-list" id="gug-list">
+                    <p class="loading-text">Loading latest notices...</p>
+                </div>
+            </div>
+
+            <div class="uni-box">
+                <h2 class="uni-header header-mdu">MDU Rohtak</h2>
+                <div class="notice-list" id="mdu-list">
+                    <p class="loading-text">Loading latest notices...</p>
+                </div>
+            </div>
+
+            <div class="uni-box">
+                <h2 class="uni-header header-du">Delhi University</h2>
+                <div class="notice-list" id="du-list">
+                    <p class="loading-text">Loading latest notices...</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>
