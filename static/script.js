@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 async function fetchNotices() {
     try {
-        const response = await fetch("http://127.0.0.1:5006/notices/");
+        const response = await fetch("/notices/");
         const result = await response.json();
         allNoticesData = result.data; 
         displayNotices(allNoticesData); 
