@@ -46,7 +46,7 @@ Check out the live project here: https://alluniversity.org
 👨‍💻 About the Developer
 Developed by Naveen Kumar MCA Graduate (2025) | Python Backend Developer
 
-LinkedIn Profile | Email: naveen.python143@gmail.com
+LinkedIn Profile https://www.linkedin.com/in/naveen-kumar143 | Email: naveen.python143@gmail.com
 
 ***
 
