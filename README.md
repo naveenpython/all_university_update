@@ -1,56 +1,59 @@
-Live at:https://alluniversity.org
+# 🎓 AllUniversity.org - Academic Alert System
 
-Yeh ek automated platform hai jo alag-alag universities (Gurugram University, MDU Rohtak, DU) ki official websites se latest notices aur updates ko scrape karke ek centralized dashboard par dikhata hai. Ise real-world production environment mein AWS par host kiya gaya hai.
+![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.100+-009688.svg)
+![AWS EC2](https://img.shields.io/badge/Deployed_on-AWS_EC2-FF9900.svg)
+![Nginx](https://img.shields.io/badge/Proxy-Nginx-009639.svg)
 
-🛠️ Tech Stack & Infrastructure
-Backend: Python 3.12 + FastAPI
+## 📌 Project Overview
+**AllUniversity.org** is a centralized, automated academic alert platform designed to scrape and serve daily notices from various university portals (including Gurugram University and MDU) into a single, accessible dashboard. It eliminates the need for students to manually check multiple slow-loading university websites.
 
-Database: MySQL (Relational database)
+## 🚀 Key Features
+- **Automated Data Pipelines:** Built with Python and Selenium to routinely extract real-time notices, exam dates, and updates.
+- **High-Performance APIs:** Utilizes FastAPI to serve extracted data swiftly to the front-end.
+- **Relational Database:** Efficient data storage and retrieval using MySQL.
+- **Production-Grade Deployment:** Hosted on an AWS EC2 instance.
+- **Server Optimization:** Configured Nginx as a reverse proxy and implemented 1GB Swap memory allocation to ensure zero downtime and resolve 502 Bad Gateway server crashes during heavy scraping loads.
 
-Scraping: Selenium & BeautifulSoup4
+## 🛠️ Tech Stack
+- **Backend:** Python, FastAPI, Web Scraping (Selenium)
+- **Database:** MySQL
+- **Infrastructure & DevOps:** AWS EC2, Nginx, Linux Server Administration
 
-Automation: APScheduler
+## ⚙️ Local Setup & Installation
 
-Server: AWS EC2 (Ubuntu)
+1. **Clone the repository:**
+   ```bash
+   git clone [https://github.com/naveenpython/all-university-scraper.git](https://github.com/naveenpython/all-university-scraper.git)
+   cd all-university-scraper
 
-Web Server: Nginx (Reverse Proxy)
+   Create and activate a virtual environment:
 
-DNS & SSL: Cloudflare (Flexible Mode)
+Bash
+python -m venv venv
+source venv/bin/activate  # On Windows use `venv\Scripts\activate`
+Install dependencies:
 
-🚀 Key Features
-Multi-University Support: Notices from multiple universities in one place.
-
-Real-time Scraping: Background workers keep the database fresh.
-
-Production Ready: Managed via nohup for 24/7 uptime.
-
-📂 Project Structure
-Plaintext
-all_university_update/
-├── main.py              # FastAPI routes aur logic
-├── database.py          # Database connection settings
-├── models.py            # Database tables schema
-├── scrapers/            # University-wise scraping modules
-├── static/              # Dashboard CSS/Images
-└── templates/           # Jinja2 HTML templates
-🔧 Installation & Deployment (AWS)
-Environment Setup: ```bash
-source myenv/bin/activate
+Bash
 pip install -r requirements.txt
+Run the FastAPI server:
 
-Database: university_update_db banaya gaya aur schema sync kiya gaya.
+Bash
+uvicorn main:app --reload
+🌐 Live Demo
+Check out the live project here: https://alluniversity.org
 
-Nginx: Domain alluniversity.org ko port 5006 par proxy kiya gaya.
+👨‍💻 About the Developer
+Developed by Naveen Kumar MCA Graduate (2025) | Python Backend Developer
 
-Uptime: Server ko nohup ke sath background mein chalu rakha gaya hai.
+LinkedIn Profile | Email: naveen.python143@gmail.com
 
-👨‍💻 Developed By
-Naveen Kumar
+***
 
-Education: Master of Computer Applications (MCA), Gurugram University (2025)
+### 💡 How to use this?
+Open your AllUniversity project/repository on GitHub.
 
-Role: Python Backend Developer
+Click on "Add a README" or "Create new file" and name the file README.md.
 
-Skills: Python, FastAPI, SQL, Web Scraping, AWS Cloud, Nginx
-
-Email: naveen.python143@gmail.com
+Copy the code provided above, paste it in the file, and save (commit) it.
+(Note: Make sure to replace the git clone link in the code with the actual link to your repository).
